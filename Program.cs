@@ -5,11 +5,11 @@ using TableDependency.SqlClient.Base.EventArgs;
 
 public class Program
 {
-    private static string connString = "Data Source=10.21.104.2;Database=Eps_Online;User Id=sa;Password=ebet909@sqlpass;Application Name=BOHDAL_Online";
+    private static string connString = "";
 
     public static void Main()
     {
-        using (var std = new SqlTableDependency<Group>(connString, "POSOrdering_ItemGroup"))
+        using (var std = new SqlTableDependency<Group>(connString, "TableNameHere"))
         {
             std.OnChanged += Changed;
             std.OnError += Error;
